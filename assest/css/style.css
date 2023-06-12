@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --body: #545d6d;
+    --dark: #202631;
+    --border-color: rgba(0, 0, 0, 0.10);
+    --border-width: 1px;
+    --border-radius: 30px;
+}
+
+/* reset & helpers */
+body {
+    font-family: "Barlow", sans-serif;
+    line-height: 1.8;
+    color: var(--body);
+   
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 800;
+    color: var(--dark);
+}
+
+a {
+    color: var(--body);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-weight: 700;
+}
+
+a:hover {
+    color: var(--dark);
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 170px;
+    padding-bottom: 170px;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    z-index: 9999;
+}
+
+.navbar-brand {
+    font-size: 28px;
+    text-transform: uppercase;
+    
+}
+
+.navbar .navbar-nav .nav-link {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    background-color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+ @media only screen and (max-width: 320px) {
+    .navbar {
+        background-color: var(--dark);
+        position: fixed;
+        top: -1000px;
+        right:0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        transition: all .45s ease;
+        
+    }
+} 
+
+
+
+/* hero */
+#hero {
+    background-image: url("../images/high-angle-pill-foils-plastic-containers.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+#hero h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+}
+#hero p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* btn */
+.btn {
+    padding: 20px 44px;
+    border-width: 2px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* Service */
+
+.service h3{
+    margin-top: 24px;
+}
+.service {
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    padding: 32px;
+    background-color: #BFD7ED;
+}
+
+.service .icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--dark);
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    color: white;
+    border-radius: var(--border-radius);
+    margin-right: 16px;
+}
+
+.link-arrow {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.link-arrow i {
+    transition: all 0.4s ease;
+}
+
+.link-arrow:hover i {
+    transform: translate(5px, -5px);
+}
+
+.link-arrow.link-dark {
+    color: var(--body);
+}
+.link-arrow.link-dark:hover {
+    color: white;
+}
+
+/* wrok */
+#work {
+    background-color: #60A3D9;
+    border-radius: 0px;
+}
+
+.project h3 {
+    color: white;
+    margin-top: 24px;
+}
+
+.project .image-wrapper {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.project .image-wrapper img {
+    border-radius: var(--border-radius);
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+
+.project:hover .image-wrapper img {
+    transform: scale(1);
+} 
+ /*card*/
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/* about */
+#about  {
+    border-radius:0mm;
+    background-color: #BFD7ED;
+    
+    
+}
+
+
+/* contact */
+#contact form {
+    padding: 32px;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+#contact form .form-control {
+    background-color: #f8f8f8;
+    border: transparent;
+    border-radius: var(--border-radius);
+    padding-left: 18px;
+}
+
+#contact form input.form-control {
+    height: 56px;
+}
+
+
+/* footer */
+#footer {
+    background-color: #BFD7ED;
+}
+.footer-top {
+    padding-bottom: 30px;
+    border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer .social-links a {
+    border: var(--border-width) solid var(--border-color);
+}
+/*@media (max-width: 1480px) {
+    header {
+        padding: 12px 2.5%;
+        transition: .1s;
+    }
+    section {
+        padding: 110px 3% 60px;
+    }
+    .end {
+        padding: 15px 3%;
+    }
+}
+@media (max-width: 1100px){
+    :root{
+        --big-font:4rem;
+        --h2-font:2.5rem;
+        --p-font:1rem;
+        transition: .1s;
+    }
+    .home-text h3{
+        font-size: 2.5rem;
+    }
+    .home{
+        height: 87vh;
+    }
+}
+@media (max-width:920){
+    .about{
+        grid-template-columns: 1fr;
+
+    }
+    .about-img img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    .contact{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: fixed;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        transition: all .45s ease;
+    }
+    .navbar-nav{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: var(--text-color);
+
+    }
+    .navlist{
+        color: var(--main-color);
+    }
+    .navlist {
+        color: var(--text-color);
+    }
+    .navlist{
+        top: 100%;
+    }
+}
